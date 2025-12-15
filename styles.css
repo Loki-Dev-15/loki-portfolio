@@ -363,11 +363,7 @@ background: rgba(255,255,255,0.08);
 
 
 body.dark .project-tags span {
-  background: linear-gradient(
-    135deg,
-    rgba(212, 175, 55, 0.28),   /* rich gold */
-    rgba(243, 229, 171, 0.22)   /* champagne */
-  );
+  
   border: 1px solid rgba(255, 215, 130, 0.25);
   color: #fff7e6; /* soft champagne white */
   box-shadow:
