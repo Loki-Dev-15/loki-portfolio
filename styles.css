@@ -177,7 +177,13 @@ body.dark .tech-grid div:hover {
 /* contact grid */
 .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;padding-top:10px}
 .contact-form label{display:block;margin-bottom:8px;font-weight:700;color:var(--text)}
-.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(15,23,36,0.06);margin-top:6px;background:transparent;color:inherit}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(180, 150, 90, 0.25);margin-top:6px;background:transparent;color:inherit}
+body.dark .contact-form input:hover,.contact-form textarea:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 20px rgba(212, 175, 55, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
 .form-actions{display:flex;gap:10px;margin-top:12px;align-items:center}
 
 /* timeline */
