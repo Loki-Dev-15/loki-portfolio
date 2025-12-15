@@ -148,6 +148,12 @@ body{
 
 /* tech grid */
 .tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+body.dark .tech-grid div:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 20px rgba(212, 175, 55, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
 .tech{padding:14px;text-align:center;font-weight:700;color:var(--text);border-radius:12px;transition:transform .3s}
 
 /* projects */
@@ -306,4 +312,23 @@ font-weight: 700;
 
 body.dark .experience-tech span {
 background: rgba(255,255,255,0.08);
+}
+
+body.dark .project-tags span {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.28),   /* rich gold */
+    rgba(243, 229, 171, 0.22)   /* champagne */
+  );
+  border: 1px solid rgba(255, 215, 130, 0.25);
+  color: #fff7e6; /* soft champagne white */
+  box-shadow:
+    0 4px 14px rgba(212, 175, 55, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+body.dark .project-tags span:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 20px rgba(212, 175, 55, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
