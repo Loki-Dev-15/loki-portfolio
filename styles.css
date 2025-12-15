@@ -76,8 +76,16 @@ body{
 }
 
 /* highlights */
-.highlights{display:flex;gap:12px;margin-top:24px;list-style:none;padding:0}
-.highlights li{font-weight:700;color:var(--muted);background:transparent;padding:8px 12px;border-radius:999px;border:1px solid rgba(15,23,36,0.03)}
+.highlights { display: flex; gap: 14px; margin-top: 24px; list-style: none; padding: 0; } 
+.highlights li { 
+		font-weight: 700; color: var(--muted); 
+		/* background: linear-gradient(135deg, rgba(245,232,200,0.85), rgba(236,216,170,0.75));  */
+		padding: 10px 16px; border-radius: 999px; 
+		border: 1px solid rgba(180,150,90,0.25); 
+		border-radius: 10px;
+		/* box-shadow: 0 6px 18px rgba(180,150,90,0.2);  */
+		transition: transform 0.3s ease, box-shadow 0.3s ease; } 
+.highlights li:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3), inset 0 1px 0 rgba(255,255,255,0.25); }
 
 /* Glass card */
 .glass-card{
@@ -350,11 +358,12 @@ background: rgba(255,255,255,0.08);
   font-size: 12px;
   font-weight: 700;
   border-radius: 999px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(79,70,229,0.12),
     rgba(236,72,153,0.12)
-  );
+  ); */
+  background: rgba(15, 23, 36, 0.06);
   color: var(--text);
   border: 1px solid rgba(15,23,36,0.08);
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
@@ -363,7 +372,6 @@ background: rgba(255,255,255,0.08);
 
 
 body.dark .project-tags span {
-  
   border: 1px solid rgba(255, 215, 130, 0.25);
   color: #fff7e6; /* soft champagne white */
   box-shadow:
