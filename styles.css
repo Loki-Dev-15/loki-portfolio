@@ -390,9 +390,9 @@ background: rgba(255,255,255,0.08);
 body.dark .project-tags span {
   border: 1px solid rgba(255, 215, 130, 0.25);
   color: #fff7e6; /* soft champagne white */
-  box-shadow:
+  /* box-shadow:
     0 4px 14px rgba(212, 175, 55, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    inset 0 1px 0 rgba(255, 255, 255, 0.15); */
 }
 body.dark .project-tags span:hover {
   transform: translateY(-1px);
