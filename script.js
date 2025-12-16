@@ -73,4 +73,29 @@ document.addEventListener('DOMContentLoaded', function(){
       if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
     });
   });
+ 
+  //Block added for Mobile resolution
+  const menuToggle = document.getElementById("menuToggle");
+	const mobileMenu = document.getElementById("mobileMenu");
+	const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+
+	menuToggle.addEventListener("click", () => {
+	  mobileMenu.style.display =
+		mobileMenu.style.display === "flex" ? "none" : "flex";
+	});
+
+	// Sync theme toggle
+	mobileThemeToggle.addEventListener("click", () => {
+	  const isDark = document.body.classList.toggle("dark");
+	  localStorage.setItem("loki_theme", isDark ? "dark" : "light");
+	  document.getElementById("themeToggle").textContent = isDark ? "☀️" : "🌙";
+	  mobileThemeToggle.textContent = isDark ? "☀️" : "🌙";
+	});
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  mobileToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+  //End of block
 });
