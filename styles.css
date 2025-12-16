@@ -180,6 +180,7 @@ body.dark .tech-grid div:hover {
 .project-card img{width:100%;height:180px;object-fit:cover}
 .project-content{padding:14px;background:transparent;flex:1;display:flex;flex-direction:column}
 .project-content h4{margin:0 0 8px 0}
+.project-content h5{margin:8px 0 0 0}
 .tags{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
 .tags span{background:rgba(15,23,36,0.04);padding:6px 8px;border-radius:999px;font-size:12px}
 .project-card:hover{transform:translateY(-10px);box-shadow:0 30px 80px rgba(2,6,23,0.08)}
@@ -344,6 +345,13 @@ background: rgba(255,255,255,0.08);
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 14px;
+}
+
+.impact-desc {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  font-size: smaller;
 }
 
 /* Grid polish */
@@ -525,6 +533,47 @@ body.dark .project-tags span:hover {
   .tech-grid,
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+    body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 20px 16px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+    .flex,
+  .row,
+  .grid {
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
   }
 }
 
