@@ -78,7 +78,7 @@
       <div class="section-grid">
         <div class="glass-card about-card" data-animate>
           <h2>About Me</h2>
-          <p>I'm Lokeshkumar — a pragmatic Full‑Stack Software Engineer who builds reliable web apps with clean code,
+          <p>I'm Lokeshkumar , a pragmatic Full‑Stack Software Engineer who builds reliable web apps with clean code,
             strong tests and production readiness. I focus on measurable results: faster load times, robust APIs and
             maintainable codebases.</p>
           <ul class="about-list">
@@ -128,7 +128,7 @@
         <p class="experience-summary">
           Designed, developed, and maintained multiple large-scale enterprise applications across finance, operations,
           and internal business workflows using ASP.NET Core, ADO.NET, and SQL Server. Owned end-to-end delivery of
-          critical modules — from requirement analysis and database design to deployment and production support — with a
+          critical modules , from requirement analysis and database design to deployment and production support , with a
           strong focus on performance optimization, security, scalability, and long-term maintainability.
         </p>
 
@@ -293,7 +293,7 @@
           <p>Location: Chennai, India</p>
           <div class="socials">
             <a href="https://www.linkedin.com/in/lokeshkumar-d-5993ba228" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">GitHub</a>
+            <!-- <a href="#" target="_blank">GitHub</a> -->
           </div>
         </aside>
 
@@ -301,9 +301,9 @@
         <!-- <ul id="messagesList"></ul> -->
 
         <!-- Confirmation Messages -->
-        <div id="messagesblock" style="display:none;">
-          <h3 style="text-align:center; margin-top:40px;">Messages Sent:</h3>
-          <div id="messagesList"></div>
+        <div id="messagesblock" class="messages-block">
+          <h3 class="messages-title">Messages Sent:</h3>
+          <div id="messagesList" class="messages-list"></div>
           <!-- style="display:flex; flex-direction:column; gap:15px; max-width:600px; margin:auto;" -->
         </div>
 
@@ -312,7 +312,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© 2025 Lokeshkumar D — Built with care</div>
+    <div class="container">© 2025 Lokeshkumar D , Built with care</div>
   </footer>
 
   <script src="script.js"></script>
@@ -373,21 +373,24 @@
 
     function addMessageCard(msg) {
       const card = document.createElement("div");
-      card.style.border = "1px solid #ddd";
-      card.style.borderRadius = "8px";
-      card.style.padding = "12px";
-      card.style.background = "#fefefe";
-      card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
-      card.style.transition = "0.3s";
-      card.onmouseover = () => card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
-      card.onmouseout = () => card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+      card.className = "message-card";
+      // card.style.border = "1px solid #ddd";
+      // card.style.borderRadius = "8px";
+      // card.style.padding = "12px";
+      // card.style.background = "#fefefe";
+      // card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+      // card.style.transition = "0.3s";
+      // card.onmouseover = () => card.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+      // card.onmouseout = () => card.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
 
       card.innerHTML = `
 			<div><strong>Name:</strong> ${msg.name}</div>
 			<div><strong>Email:</strong> ${msg.email}</div>
-			<div><strong>Message:</strong> ${msg.message}</div>
-			<div style="color: gray; font-size: 12px;">${msg.date}</div>
+			<div><strong>Message:</strong> ${msg.message}</div>			
+			<div class="message-meta">${msg.date}</div>
 		`;
+
+    // div style="color: gray; font-size: 12px;">${msg.date}</div>
 
       // Add new messages at the top
       messagesList.prepend(card);
