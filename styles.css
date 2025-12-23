@@ -728,6 +728,39 @@ body.dark .project-tags span:hover {
   letter-spacing: 0.02em;
 }
 
+/* ------------------------------ */
+/* Light Mode Overrides */
+/* ------------------------------ */
+body:not(.dark) .messages-title {
+  color: #111827; /* heading in light mode */
+}
+
+body:not(.dark) .messages-list .message-card {
+  background: rgba(255, 255, 255, 0.9); /* glass effect */
+  border: 1px solid rgba(180, 150, 90, 0.25);
+  color: #1f2937; /* dark text */
+  box-shadow: 0 6px 20px rgba(180,150,90,0.2);
+  backdrop-filter: blur(10px);
+}
+
+body:not(.dark) .messages-list .message-card .name,
+body:not(.dark) .messages-list .message-card strong {
+  color: #111827;
+}
+
+body:not(.dark) .messages-list .message-card .email,
+body:not(.dark) .messages-list .message-card .date,
+body:not(.dark) .messages-list .message-card .message-meta,
+body:not(.dark) .messages-list .message-card .message-time {
+  color: #4b5563;
+}
+
+body:not(.dark) .messages-list .message-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(180,150,90,0.25);
+}
+
+
 /* Mobile adjustments */
 @media (max-width: 480px) {
   .messages-list {

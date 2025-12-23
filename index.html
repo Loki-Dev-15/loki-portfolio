@@ -436,49 +436,15 @@
 
     const now = new Date();
     const seconds = Math.floor((now - dateObj) / 1000);
-
+    const hrs = Math.floor(seconds / 3600);
     if (seconds < 60) return 'Just now';
     if (seconds < 3600) return `${Math.floor(seconds / 60)} min ago`;
-    if (seconds < 86400) return `${Math.floor(seconds / 3600)} hrs ago`;
+    if (seconds < 86400) return `${hrs} hr${hrs < 2 ? 's' : ''} ago`;
 
     // For older messages, show a formatted date like "23 Dec 2025"
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     return dateObj.toLocaleDateString('en-GB', options);
   }
-
-  function timeAgo(input) {
-    let dateObj = null;
-
-    if (input instanceof Date) {
-      dateObj = input;
-    } else if (typeof input === 'string') {
-      // Try ISO first (reliable)
-      const isoCandidate = new Date(input);
-      if (!isNaN(isoCandidate.getTime())) {
-        dateObj = isoCandidate;
-      } else {
-        // Fallback to dd/mm/yyyy, hh:mm:ss am/pm
-        dateObj = parseIndianLocaleDate(input);
-      }
-    }
-
-    if (!dateObj || isNaN(dateObj.getTime())) {
-      console.warn('Invalid date supplied to timeAgo:', input);
-      return 'Invalid date';
-    }
-
-    const now = new Date();
-    const seconds = Math.floor((now - dateObj) / 1000);
-
-    if (seconds < 60) return 'Just now';
-    if (seconds < 3600) return `${Math.floor(seconds / 60)} min ago`;
-    if (seconds < 86400) return `${Math.floor(seconds / 3600)} hrs ago`;
-
-    // For older messages, show a formatted date like "23 Dec 2025"
-    const options = { day: '2-digit', month: 'short', year: 'numeric' };
-    return dateObj.toLocaleDateString('en-GB', options);
-  }
-
 
     function addMessageCard(msg) {
       const card = document.createElement("div");
