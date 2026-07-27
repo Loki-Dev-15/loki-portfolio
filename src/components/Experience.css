@@ -1,0 +1,161 @@
+.ledger {
+  display: flex;
+  flex-direction: column;
+}
+
+.ledger-entry {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 24px;
+}
+
+.ledger-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ledger-node {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+  margin-top: 34px;
+}
+
+.ledger-rail-line {
+  flex: 1;
+  width: 1px;
+  background: var(--divider);
+  margin-top: 6px;
+}
+
+.ledger-content {
+  padding: 32px;
+  margin-bottom: 28px;
+}
+
+.ledger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ledger-header-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ledger-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  padding: 6px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.ledger-role {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ledger-company {
+  margin-top: 6px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+
+.ledger-dot {
+  color: var(--muted-2);
+}
+
+.ledger-duration {
+  font-size: 12.5px;
+  color: var(--gold);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.ledger-summary {
+  margin-top: 20px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.ledger-points {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ledger-points li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+
+.ledger-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 1.5px;
+  background: var(--gold);
+}
+
+.ledger-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--divider);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 11px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  border: 1px solid var(--divider);
+}
+
+.tag-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tag-icon-glyph {
+  font-size: 13px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 620px) {
+  .ledger-content {
+    padding: 24px 20px;
+  }
+
+  .ledger-entry {
+    grid-template-columns: 18px 1fr;
+    gap: 14px;
+  }
+}

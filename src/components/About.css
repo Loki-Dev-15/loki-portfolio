@@ -1,0 +1,99 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.about-card {
+  padding: 36px;
+}
+
+.about-lead {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--text-dim);
+}
+
+.about-principles {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--divider);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.about-principles li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.about-principle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.about-focus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-focus-item {
+  display: flex;
+  gap: 18px;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.about-focus-item:hover {
+  border-color: var(--border-strong);
+  transform: translateX(4px);
+}
+
+.about-focus-index {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 700;
+  padding-top: 2px;
+}
+
+.about-focus-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.about-focus-detail {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (max-width: 880px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-principles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-card {
+    padding: 26px 22px;
+  }
+}
