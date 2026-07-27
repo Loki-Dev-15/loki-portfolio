@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="nav-actions">
             <a
               className="btn btn-primary btn-small nav-cv"
-              href="/Lokeshkumar_D_Software_Engineer_DotNet_Resume_2025.pdf"
+              href="/Lokeshkumar_D_DotNet_Developer_Resume.pdf"
               download
             >
               Download CV
