@@ -24,7 +24,7 @@ function ScrollToHash() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/loki-portfolio">
+      <BrowserRouter basename="/loki-portfolio-v2">
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />
