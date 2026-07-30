@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { TbSun, TbMoonStars, TbMenu2, TbX } from "react-icons/tb";
 import { useTheme } from "../hooks/useTheme.jsx";
+import { RESUME_URL } from "../data/site.js";
 import "./Navbar.css";
 
 const LINKS = [
@@ -47,11 +48,7 @@ export default function Navbar() {
           </nav>
 
           <div className="nav-actions">
-            <a
-              className="btn btn-primary btn-small nav-cv"
-              href={RESUME_URL}
-              download
-            >
+            <a className="btn btn-primary btn-small nav-cv" href={RESUME_URL} download>
               Download CV
             </a>
             <button
@@ -77,12 +74,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            className="btn btn-primary btn-small"            
-            href={RESUME_URL} 
-            download
-            onClick={handleLinkClick}
-          >
+          <a className="btn btn-primary btn-small" href={RESUME_URL} download onClick={handleLinkClick}>
             Download CV
           </a>
         </div>
