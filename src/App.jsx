@@ -24,7 +24,11 @@ function ScrollToHash() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/loki-portfolio">
+      {/* basename is read from Vite's `base` config (vite.config.js), not
+          hardcoded here — so renaming the repo/subpath again only ever
+          requires editing one file.
+      <BrowserRouter basename="/loki-portfolio"> */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />

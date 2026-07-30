@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="nav-actions">
             <a
               className="btn btn-primary btn-small nav-cv"
-              href="/Lokeshkumar_D_DotNet_Developer_Resume.pdf"
+              href={RESUME_URL}
               download
             >
               Download CV
@@ -78,8 +78,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            className="btn btn-primary btn-small"
-            href="/Lokeshkumar_D_DotNet_Developer_Resume.pdf"
+            className="btn btn-primary btn-small"            
+            href={RESUME_URL} 
             download
             onClick={handleLinkClick}
           >

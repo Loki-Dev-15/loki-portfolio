@@ -59,7 +59,7 @@ export default function Contact() {
               <textarea name="message" rows={5} placeholder="Tell me about the project or role..." required />
             </label>
 
-            <div className="form-actions">
+           {/* <div className="form-actions">
               <button className="btn btn-primary" type="submit" disabled={status === "sending"}>
                 {status === "sending" ? "Sending…" : status === "sent" ? "Sent — thank you!" : "Send message"}
               </button>
@@ -68,6 +68,15 @@ export default function Contact() {
                 href="/Lokeshkumar_D_Software_Engineer_DotNet_Resume_2025.pdf"
                 download
               >
+                Download CV
+              </a>
+            </div>*/}
+
+             <div className="form-actions">
+              <button className="btn btn-primary" type="submit" disabled={status === "sending"}>
+                {status === "sending" ? "Sending…" : status === "sent" ? "Sent — thank you!" : "Send message"}
+              </button>
+              <a className="btn btn-ghost" href={RESUME_URL} download>
                 Download CV
               </a>
             </div>
